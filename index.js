@@ -18,7 +18,7 @@ mongoose
   .catch((e) => {
     console.log('Error de conexión a la base de datos:', e);
   });
-
+const app = express()
 
   app.use(cors({
     origin: '*', // Permite cualquier origen
@@ -26,7 +26,7 @@ mongoose
     allowedHeaders: ['Content-Type', 'Authorization']
   }));
 
-const app = express()
+
 
 
 
