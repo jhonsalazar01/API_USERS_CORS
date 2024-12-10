@@ -20,12 +20,7 @@ mongoose
   });
 const app = express()
 
-  app.use(cors({
-    origin: '*', // Permite cualquier origen
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  }));
-
+app.use(cors({ origin: 'https://a-time-for-lunch-vdfv.onrender.com' }));
 
 
 
