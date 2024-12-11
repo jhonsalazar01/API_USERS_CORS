@@ -34,7 +34,9 @@ router.post('/login', async (req, res) => {
     const token = jwt.sign(
         {
             name: user.name,
-            id: user._id
+            userId: user._id,
+            name: user.name,
+            email:user.email
         },
         process.env.TOKEN_SECRET
     );
@@ -45,7 +47,8 @@ router.post('/login', async (req, res) => {
         data: {
             token: token,
             userId: user._id,
-            name: user.name // Incluye el nombre del usuario
+            name: user.name,
+            email:user.email
         },
         message: `Bienvenido ${user._id}` // Usando template strings
     };
